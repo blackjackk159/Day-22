@@ -8,7 +8,7 @@ router.post("/", async (req, res, next) => {
     const data = req.body;
     if (!data.content) {
       // 將以下改為 appError 自訂錯誤回饋
-      return next(new appError(400, "欄位未填寫正確：貼文內容為必填", next));
+      return next(new appError("欄位未填寫正確：貼文內容為必填", 400));
     }
     const newPost = await Post.create({
       user: data.user,

@@ -1,4 +1,4 @@
-class AppError extends Error {
+class appError extends Error {
   constructor(message, statusCode) {
     super(message);
     //Http Error Code 4xx: client error, 5xx: server error
@@ -8,4 +8,4 @@ class AppError extends Error {
   }
 }
 
-module.exports = AppError;
+module.exports = appError;
